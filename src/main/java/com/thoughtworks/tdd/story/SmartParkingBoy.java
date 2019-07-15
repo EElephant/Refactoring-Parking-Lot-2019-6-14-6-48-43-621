@@ -4,6 +4,9 @@ public class SmartParkingBoy extends ParkingBoy{
 
     private ParkingLot parkingLot = new ParkingLot(10);
     private ParkingLot secondParkingLot = new ParkingLot(20);
+    private static final int EMPTYNUMBER = 0;
+    private static final int FIRSTPARKINGLOT = 1;
+    private static final int SECONDPARKINGLOT = 2;
 
     public Ticket park(Car car) {
         if(parkingLot.getAvalidPositionCount() >= secondParkingLot.getAvalidPositionCount()) {
@@ -21,11 +24,11 @@ public class SmartParkingBoy extends ParkingBoy{
     }
 
     public int getLotPositionCountByLot(int i){
-        if(i == 1)
+        if(i == FIRSTPARKINGLOT)
             return parkingLot.getAvalidPositionCount();
-        if(i == 2)
+        if(i == SECONDPARKINGLOT)
             return secondParkingLot.getAvalidPositionCount();
         else
-            return 0;
+            return EMPTYNUMBER;
     }
 }

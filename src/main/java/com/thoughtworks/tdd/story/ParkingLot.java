@@ -6,6 +6,7 @@ import java.util.Map;
 public class ParkingLot {
     private Map<Ticket, Car> parkingInfo = new HashMap<>();
     private int position = 10;
+    private static final String EMPTYSTRING = "";
     private String message;
 
     public ParkingLot(int position){
@@ -38,7 +39,7 @@ public class ParkingLot {
 
     public String queryMessage(){
         String str = message;
-        message = "";
+        message = EMPTYSTRING;
         return str;
     }
 

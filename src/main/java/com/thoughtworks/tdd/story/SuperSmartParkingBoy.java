@@ -3,6 +3,9 @@ package com.thoughtworks.tdd.story;
 public class SuperSmartParkingBoy extends ParkingBoy{
     private ParkingLot parkingLot = new ParkingLot(10);
     private ParkingLot secondParkingLot = new ParkingLot(20);
+    private static final int EMPTYNUMBER = 0;
+    private static final int FIRSTPARKINGLOT = 1;
+    private static final int SECONDPARKINGLOT = 2;
 
     public Ticket park(Car car) {
         if(getParkingLotPositionRate(parkingLot) >= getParkingLotPositionRate(secondParkingLot)) {
@@ -20,12 +23,12 @@ public class SuperSmartParkingBoy extends ParkingBoy{
     }
 
     public int getLotPositionCountByLot(int i){
-        if(i == 1)
+        if(i == FIRSTPARKINGLOT)
             return parkingLot.getAvalidPositionCount();
-        if(i == 2)
+        if(i == SECONDPARKINGLOT)
             return secondParkingLot.getAvalidPositionCount();
         else
-            return 0;
+            return EMPTYNUMBER;
     }
 
     public float getParkingLotPositionRate(ParkingLot p){
