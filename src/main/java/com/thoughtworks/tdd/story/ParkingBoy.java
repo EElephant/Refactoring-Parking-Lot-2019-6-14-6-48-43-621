@@ -7,7 +7,6 @@ public class ParkingBoy {
 
 
     public Ticket park(Car car) {
-//        Ticket ticket = null;
         Ticket ticket = parkingLot.getTicketByCar(car);
         if(parkingLot.isFull()){
             if (!secondParkingLot.isFull())
