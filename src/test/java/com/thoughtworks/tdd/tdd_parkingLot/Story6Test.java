@@ -42,8 +42,8 @@ public class Story6Test {
         manager.addParkingBoy(parkingBoy1);
         manager.addParkingBoy(parkingBoy2);
 
-        boolean result1 = manager.checkParkingBoyAuthorityByParkingList(parkingBoy1);
-        boolean result2 = manager.checkParkingBoyAuthorityByParkingList(parkingBoy3);
+        boolean result1 = manager.isParkingBoyBelongToManager(parkingBoy1);
+        boolean result2 = manager.isParkingBoyBelongToManager(parkingBoy3);
 
         assertThat(result1,is(true));
         assertThat(result2,is(false));

@@ -16,7 +16,7 @@ public class Manager {
         return parkingBoyList;
     }
 
-    public boolean checkParkingBoyAuthorityByParkingList(ParkingBoy parkingBoy) {
+    public boolean isParkingBoyBelongToManager(ParkingBoy parkingBoy) {
         return parkingBoyList.contains(parkingBoy);
     }
 
